@@ -1,12 +1,8 @@
-# Package name
+# Template : How to start and customize?
 
-Write package short description here.
-
-# Template customization
-
-Please change :
-- [ ] pyproject.toml package_name
-- [ ] Create package_name directory with at least `__init__.py` file
+- [ ] Create new repository from this template
+- [ ] pyproject.toml rename package_name
+- [ ] Rename aisp_template directory to package_name
 - [ ] Update `README.md`
 
 # Template directory structure
@@ -15,6 +11,10 @@ Please change :
 - tests/ - Insert unit tests here
 - scripts/ - Insert scripts here
 - images/ - If this is CV/AI repository then insert images here
+
+# Package name
+
+Write package short description here.
 
 # Installation : Developer
 
