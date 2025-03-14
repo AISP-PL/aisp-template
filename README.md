@@ -9,6 +9,13 @@ Please change :
 - [ ] Create package_name directory with at least `__init__.py` file
 - [ ] Update `README.md`
 
+# Template directory structure
+
+- package_name/ - Insert package code here
+- tests/ - Insert unit tests here
+- scripts/ - Insert scripts here
+- images/ - If this is CV/AI repository then insert images here
+
 # Installation : Developer
 
 Use poetry to install the package in development mode.
