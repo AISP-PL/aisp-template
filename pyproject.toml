@@ -18,6 +18,36 @@ flake8-pyproject = "^1.2.3"
 flake8-bugbear = "^24.12.12"
 pytest = "^8.3.5"
 
+[tool.black]
+line-length = 120
+#Needed as of black 23.12.1 to properly split long stings
+preview = true
+exclude = '''
+/(
+    \.venv
+    | \.pytest_cache
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 120
+skip = ['.venv', '.pytest_cache']
+
+
+[tool.flake8]
+max-line-length = 120
+extend-select = ['B950']
+# E203, E501, E701 are rules incompatiblie with black and are exclued as recommended by black documentation
+extend-ignore = ['E501', 'E701', 'E203', 'B950']
+extend-exclude = ['.venv', '.pytest_cache']
+
+[tool.mypy]
+exclude = ['.venv', '.pytest_cache']
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
